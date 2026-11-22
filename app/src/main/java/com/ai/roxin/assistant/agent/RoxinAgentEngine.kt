@@ -223,7 +223,7 @@ class RoxinAgentEngine(private val context: Context, private val apiKey: String)
             "look_through_camera" -> {
                 val prompt = args.optString("prompt", "اس تصویر میں کیا نظر آ رہا ہے؟")
                 val base64 = suspendCoroutine<String?> { cont ->
-                    cameraVision.captureCurrentView { img -> cont.resume(img) }
+                    cameraVision.captureCurrentView { img: String -> cont.resume(img) }
                 }
                 if (base64 != null) {
                     analyzeWithVision(prompt, base64)

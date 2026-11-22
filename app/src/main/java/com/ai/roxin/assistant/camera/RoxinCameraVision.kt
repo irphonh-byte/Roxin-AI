@@ -1,4 +1,4 @@
-package com.ai.maya.assistant.camera
+package com.ai.roxin.assistant.camera
 
 import android.content.Context
 import android.graphics.Bitmap
